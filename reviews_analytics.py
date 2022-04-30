@@ -20,3 +20,15 @@ print('留言的平均長度為:', sum_len/len(data), '個字')
 #	i += 1
 #average = total/1000000
 #print(average)
+
+#----------------------
+#要找留言小於100字的
+small = 0
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('一共有', len(new), '筆留言長度<100個字')
+#	while len(d) < 100:
+#		small += 1
+#print(small)
