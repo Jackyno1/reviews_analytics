@@ -3,7 +3,7 @@
 data = []
 with open('reviews.txt', 'r') as f:
 	for sentence in f:
-		data.append(sentence.strip())
+		data.append(sentence)
 sum_len = 0
 for d in data:
 	sum_len += len(d)
@@ -32,3 +32,14 @@ print('一共有', len(new), '筆留言長度<100個字')
 #	while len(d) < 100:
 #		small += 1
 #print(small)
+#-----------------------
+#找到留言中有"good"這個字的留言
+count = 0
+for d in data:
+	if 'good' in d:
+		count += 1
+print('留言中有"good"這個字的數量有', count, '個')
+#-----------------------
+#快寫法
+good = [d for d in data if 'good' in d]
+print(len(good))
